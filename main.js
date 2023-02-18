@@ -1,8 +1,12 @@
-let num1 = Number(prompt(`Ingrese el primer número:`));
-let num2 = Number(prompt(`Ingrese el segundo número:`));
-if( num1 > num2){
-    console.log(`De los 2 números ingresados el mayor es: ${num1}`)
+let numeros, mayor=0; 
+do{
+    numeros = Number(prompt(`Tener en cuenta que si ingresa el 0, termina el programa
+Ingrese un número:`));
+    console.log(numeros);
+    if(numeros > mayor ){
+    mayor=numeros;  
+    }
 }
-else{
-    console.log(`De los 2 números ingresados el mayor es: ${num2}`)
+while(numeros != 0 ){
 }
+console.log(`El número mayor de los números ingresados es: ${mayor}`)
