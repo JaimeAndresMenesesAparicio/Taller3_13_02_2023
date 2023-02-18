@@ -1,20 +1,26 @@
-// 6.	Realizar un programa que lea N números, calcule y escriba la suma de los pares y el producto de los impares.
-
-let numeros, par=0, impar=1; 
-do{numeros = Number(prompt(`Tener en cuenta que si ingresa el 0, termina el programa
-Ingrese un número:`));
-if(numeros == 0){
-    console.log("El programa ha terminado.")
+// 7.	Dados dos números enteros positivos N y D, se dice que D es un divisor
+//  de N si el resto de dividir N entre D es 0. Se dice que un número N es 
+//  perfecto si la suma de sus divisores (excluido el propio N) es N.
+//  Por ejemplo 28 es perfecto, pues sus divisores (excluido elv28) son:
+//  1, 2, 4, 7 y 14 y su suma es 1+2+4+7+14=28. Hacer un organigrama 
+//  que dado un número N nos diga si es o no perfecto.
+let suma=0;
+let N = Number(prompt(`Ingrese el primer número:`));
+let D = Number(prompt(`Ingrese el segundo número:`));
+if(N%D == 0){
+    console.log(`El ${D} es divisor de ${N}.`);    
 }
 else{
-if(numeros%2 == 0){
-    par+=numeros;
-    console.log(`La suma de los números pares es: ${par}`);
+    console.log(`El ${D} no es divisor de ${N}.`);    
+}
+for(let i=1; i<N; i++){
+    if(N%i==0){
+        suma+=i;
+    }
+}
+if(suma == N){
+    console.log(`El número es perfecto`);    
 }
 else{
-    impar*=numeros;
-    console.log(`El producto de los números impares es: ${impar}`);
-}
-}}
-while(numeros != 0 ){
+    console.log(`El número es no perfecto`);    
 }
