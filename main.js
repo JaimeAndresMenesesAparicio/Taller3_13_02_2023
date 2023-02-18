@@ -1,12 +1,3 @@
-let numeros, mayor=0; 
-do{
-    numeros = Number(prompt(`Tener en cuenta que si ingresa el 0, termina el programa
-Ingrese un número:`));
-    console.log(numeros);
-    if(numeros > mayor ){
-    mayor=numeros;  
-    }
-}
-while(numeros != 0 ){
-}
-console.log(`El número mayor de los números ingresados es: ${mayor}`)
+let num1 = Number(prompt(`Ingrese el primer número:`));
+let num2 = Number(prompt(`Ingrese el segundo número:`));
+console.log(`La suma de los 2 números ingresados es: ${num1+num2}`)
